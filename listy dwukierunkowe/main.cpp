@@ -6,34 +6,34 @@ int main() {
 
     std::cout << "--- TESTOWANIE LISTY DWUKIERUNKOWEJ ---" << std::endl;
     
-    // 1. Dodawanie elementów
+    
     list.pushBack(10);
     list.pushBack(20);
     list.pushFront(5);
-    list.displayForward();
+    list.displayForward(); 
 
-    // 2. Dodawanie pod indeks
+   
     list.insertAt(1, 7);
-    list.displayForward(); // Oczekiwane: 5 7 10 20
+    list.displayForward(); 
 
-    // 3. Wyświetlanie wstecz
-    list.displayBackward(); // Oczekiwane: 20 10 7 5
+    
+    list.displayBackward(); 
 
-    // 4. Usuwanie elementów
+    
     list.popFront();
-    list.displayForward(); // Oczekiwane: 7 10 20
+    list.displayForward(); 
 
     list.popBack();
-    list.displayForward(); // Oczekiwane: 7 10
+    list.displayForward(); 
 
     list.pushBack(30);
     list.pushBack(40);
-    list.displayForward(); // Oczekiwane: 7 10 30 40
+    list.displayForward(); 
 
-    list.removeAt(2); // Usuwa element '30'
-    list.displayForward(); // Oczekiwane: 7 10 40
+    list.removeAt(2);
+    list.displayForward(); 
 
-    // 5. Testowanie iteratora (wyświetlanie następnego / poprzedniego elementu)
+    
     std::cout << "\n--- TEST ITERATORA ---" << std::endl;
     ListIterator it = list.getIterator();
     std::cout << "Aktualny (poczatek): " << it.get() << std::endl;
@@ -44,7 +44,7 @@ int main() {
         std::cout << "Poprzedni: " << it.prev() << std::endl;
     }
 
-    // 6. Czyszczenie listy
+    
     list.clear();
     std::cout << "Po wyczyszczeniu:" << std::endl;
     list.displayForward();

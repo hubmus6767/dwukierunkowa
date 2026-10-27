@@ -1,6 +1,7 @@
 #ifndef DOUBLY_LINKED_LIST_H
 #define DOUBLY_LINKED_LIST_H
 
+#include <cstddef>
 #include "Node.h"
 #include "ListIterator.h"
 
@@ -26,7 +27,7 @@ public:
     void displayBackward() const;
     
     void clear();
-    size_t getSize() const;
+    size_t getSize() const; 
 
     ListIterator getIterator() const;
     ListIterator getReverseIterator() const;
